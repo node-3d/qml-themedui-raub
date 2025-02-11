@@ -4,8 +4,7 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"start": "tsx main.ts",
-		"start2": "node --experimental-strip-types main.ts"
+		"start": "node --experimental-strip-types main.ts"
 	},
 	"engines": {
 		"node": ">=22.9.0",
@@ -21,7 +20,6 @@
 		"qml-fontawesome-raub": "^0.1.0",
 		"three": "0.172.0",
 		"tsconfig-paths": "^4.2.0",
-		"tsx": "^4.19.2",
 		"typescript": "^5.7.2"
 	}
 }
