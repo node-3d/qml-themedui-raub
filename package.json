@@ -1,0 +1,35 @@
+{
+	"author": "Luis Blanco <luisblanco1337@gmail.com>",
+	"name": "qml-themedui-raub",
+	"version": "0.0.1",
+	"description": "Themed UI components for QML",
+	"license": "MIT",
+	"main": "index.js",
+	"keywords": [
+		"qt",
+		"qml",
+		"themedui",
+		"icons",
+		"qtquick",
+		"flex",
+		"themes",
+		"components"
+	],
+	"files": [
+		"index.d.ts",
+		"index.js",
+		"ThemedUi",
+		"LICENSE",
+		"package.json"
+	],
+	"scripts": {},
+	"engines": {
+		"node": ">=12.13.0",
+		"npm": ">=6.12.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/node-3d/qml-themedui-raub.git"
+	},
+	"dependencies": {}
+}

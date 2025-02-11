@@ -1,0 +1,16 @@
+module ThemedUi
+
+import QtQuick
+import QtQuick.Controls.Basic
+import QtQuick.Controls
+import QtQuick.Layouts
+import QtQml.Models
+
+singleton TuiContext 1.0 TuiContext.qml
+
+TuiText 1.0 TuiText.qml
+TuiFlex 1.0 TuiFlex.qml
+TuiIcon 1.0 TuiIcon.qml
+TuiButton 1.0 TuiButton.qml
+TuiDivider 1.0 TuiDivider.qml
+TuiListItem 1.0 TuiListItem.qml
