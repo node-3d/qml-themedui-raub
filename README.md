@@ -207,6 +207,7 @@ This is a singleton, available after importing the module.
 
 
 `TuiContext.themeUtils` - (readonly) helpers to create some theme-related items:
+
 	```ts
 	{
 		hashIntoColor: (str: string) => string,
