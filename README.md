@@ -208,23 +208,23 @@ This is a singleton, available after importing the module.
 
 `TuiContext.themeUtils` - (readonly) helpers to create some theme-related items:
 
-	```ts
-	{
-		hashIntoColor: (str: string) => string,
-		createFlatColorset: (
-			text: string, textHover: string, textActive: string, bg: string, bgHover: string, bgActive: string,
-		) => TColorSet,
-		createGhostColorset: (text: string, textHover: string, textActive: string) => TColorSet,
-		createTextColorset: (text: string, textHover: string, textActive: string) => TColorSet,
-		createStateColorsetTriplet: (name: keyof TColorSlots) => {
-			`${name}`: TColorSet,
-			`${name}ghost`: TColorSet,
-			`${name}text`: TColorSet,
-		}
-		mapShapes: (sm, md, lg, xlg) => TShapeRadii,
-		auxSides: (source: string) => [number, number, number, number]
+```ts
+{
+	hashIntoColor: (str: string) => string,
+	createFlatColorset: (
+		text: string, textHover: string, textActive: string, bg: string, bgHover: string, bgActive: string,
+	) => TColorSet,
+	createGhostColorset: (text: string, textHover: string, textActive: string) => TColorSet,
+	createTextColorset: (text: string, textHover: string, textActive: string) => TColorSet,
+	createStateColorsetTriplet: (name: keyof TColorSlots) => {
+		`${name}`: TColorSet,
+		`${name}ghost`: TColorSet,
+		`${name}text`: TColorSet,
 	}
-	```
+	mapShapes: (sm, md, lg, xlg) => TShapeRadii,
+	auxSides: (source: string) => [number, number, number, number]
+}
+```
 
 `TuiContext.defaultTheme` - (readonly) the default theme object that may be used
 to inherit some of the fields.
@@ -234,6 +234,8 @@ The initial value is `TuiContext.defaultTheme`.
 
 `TuiContext.iconDelegate` - assign your icon adapter (component) here.
 The initial value is `FakeIcon {}` (red box).
+
+The helpers below will fetch named values from the current theme:
 
 ```ts
 TuiContext.getShape(name: string): TShapeRadii | null;
