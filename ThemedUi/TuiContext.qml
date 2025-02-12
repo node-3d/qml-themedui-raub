@@ -45,14 +45,14 @@ QtObject {
 	
 	property Component iconDelegate: FakeIcon {}
 	
-	property var icons: QtObject {
-		property var caretDown: FakeIcon { name: "caretDown" }
-		property var radioOn: FakeIcon { name: "radioOn" }
-		property var radioOff: FakeIcon { name: "radioOff" }
-		property var checkboxOn: FakeIcon { name: "checkboxOn" }
-		property var checkboxOff: FakeIcon { name: "checkboxOff" }
-		property var switchHandle: FakeIcon { name: "switchHandle" }
-	}
+	// property var icons: QtObject {
+	// 	property Component caretDown: FakeIcon { name: "caretDown" }
+	// 	property Component radioOn: FakeIcon { name: "radioOn" }
+	// 	property Component radioOff: FakeIcon { name: "radioOff" }
+	// 	property Component checkboxOn: FakeIcon { name: "checkboxOn" }
+	// 	property Component checkboxOff: FakeIcon { name: "checkboxOff" }
+	// 	property Component switchHandle: FakeIcon { name: "switchHandle" }
+	// }
 	
 	property var textAligns: QtObject {
 		property int left: Text.AlignLeft

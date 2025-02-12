@@ -52,7 +52,7 @@ const getThemeShadowText = (theme, name) => getNested(theme.shadowsText, name);
 
 const getThemeColor = (theme, name) => getNested(theme.colors, name);
 
-const getThemeColorSet = (theme, fontName, state, colors) => {
+const getThemeColorSet = (theme, name, state, colors) => {
 	const colorSets = theme.colorSets;
     const finalColorset = (
         typeof colors === 'string'
@@ -61,9 +61,9 @@ const getThemeColorSet = (theme, fontName, state, colors) => {
     );
     
     const key = (
-        (state === 'active' && `${fontName}Active`) ||
-        (state === 'hover' && `${fontName}Hover`) ||
-        fontName
+        (state === 'active' && `${name}Active`) ||
+        (state === 'hover' && `${name}Hover`) ||
+        name
     );
     const color = finalColorset[key];
     

@@ -100,6 +100,7 @@ IconAwesome {
 ```
 
 This would work with module `qml-fontawesome-raub` as per example.
+Failing to set `iconDelegate` will result in all icons appearing as red boxes.
 
 ## Theming
 
@@ -197,6 +198,53 @@ TuiContext.theme = MyThemes.theme1;
 		[id]: TColorSet,
 	},
 }
+```
+
+
+## TuiContext
+
+This is a singleton, available after importing the module.
+
+
+`TuiContext.themeUtils` - (readonly) helpers to create some theme-related items:
+	```ts
+	{
+		hashIntoColor: (str: string) => string,
+		createFlatColorset: (
+			text: string, textHover: string, textActive: string, bg: string, bgHover: string, bgActive: string,
+		) => TColorSet,
+		createGhostColorset: (text: string, textHover: string, textActive: string) => TColorSet,
+		createTextColorset: (text: string, textHover: string, textActive: string) => TColorSet,
+		createStateColorsetTriplet: (name: keyof TColorSlots) => {
+			`${name}`: TColorSet,
+			`${name}ghost`: TColorSet,
+			`${name}text`: TColorSet,
+		}
+		mapShapes: (sm, md, lg, xlg) => TShapeRadii,
+		auxSides: (source: string) => [number, number, number, number]
+	}
+	```
+
+`TuiContext.defaultTheme` - (readonly) the default theme object that may be used
+to inherit some of the fields.
+
+`TuiContext.theme` - assign your theme object here.
+The initial value is `TuiContext.defaultTheme`.
+
+`TuiContext.iconDelegate` - assign your icon adapter (component) here.
+The initial value is `FakeIcon {}` (red box).
+
+```ts
+TuiContext.getShape(name: string): TShapeRadii | null;
+TuiContext.getBorder(name): number | null;
+TuiContext.getSize(name, prefix): number;
+TuiContext.getFont(name): TFont | null;
+TuiContext.getShadow(name): TBoxShadow | null;
+TuiContext.getShadowText(name): TTextShadow | null;
+TuiContext.getColor(name): string;
+TuiContext.getColorBg(state, colors): string;
+TuiContext.getColorText(state, colors): string;
+TuiContext.getColorBorder(state, colors): string;
 ```
 
 
